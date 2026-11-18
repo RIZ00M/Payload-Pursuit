@@ -1,10 +1,4 @@
 public class Card implements CardInterface {
-    // Card Values
-    // In Payload Pursuit, the suit of a card is unimportant however I have added it as one of my extra features.
-    // Number cards (2–10): contribute their face value.
-    // Face cards (Jack, Queen, King) contribute 10 points.
-    // Ace cards contribute either 11 or 1, whatever improves the player’s round result.
-
     private String rank;
     private String suit;
 
@@ -19,7 +13,7 @@ public class Card implements CardInterface {
     public String getSuit() { return suit; }
 
     public int getValue() {
-        // If it's an ace return value 11
+        // If it's an ace return value 11. The logic behind 1 or 11 will be calculated in Scoring.Java
         if (rank.equals("A")) {
             return 11;
         }
